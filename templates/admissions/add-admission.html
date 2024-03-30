@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+<head>
+<title>add admissions page</title>
+<link rel="stylesheet" href="{% static "stylesheets/style.css" %}"/>
+</head>
+<body>
+
+
+<h1>Hello , Welcome to add admissions page.</h1>
+
+<img src="{% static "images/gurukul.png"%}" width="100" height="100" alt="Image Not Found"/>
+
+<h3>please fill below application form</h3><br/><br/>
+
+<form method="POST">
+<table>
+  {{form.as_table}}
+</table>
+
+
+<br/>
+<input type="submit" value="Add Student">
+
+{% csrf_token %}
+</form>
+
+<br/><br/>
+</body>
+
+</html>
